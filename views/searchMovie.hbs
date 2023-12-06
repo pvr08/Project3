@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Search</title>
+</head>
+<body>
+  <h1>Movie Search</h1>
+  <form action="/api/Moviesh" method="post">
+    <label for="page">Page:</label>
+    <input type="number" name="page" required>
+
+    <label for="perPage">Movies per Page:</label>
+    <input type="number" name="perPage" required>
+
+    <label for="title">Movie Title:</label>
+    <input type="text" name="title">
+
+    <button type="submit">Search</button>
+  </form>
+</body>
+</html>

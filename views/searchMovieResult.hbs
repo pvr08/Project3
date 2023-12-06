@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results</title>
+</head>
+<body>
+ 
+ <h1>Search Results</h1>
+
+{{#each moviesData}}
+  <div class="movie-container">
+    <img src="{{poster}}" alt="{{title}} Poster" class="movie-poster">
+    <div class="movie-details">
+      <h2>{{title}} ({{year}})</h2>
+      <p>{{fullplot}}</p>
+      <p><strong>Genres:</strong> {{genres.join(', ')}}</p>
+      <p><strong>Runtime:</strong> {{runtime}} minutes</p>
+      <p><strong>Rated:</strong> {{rated}}</p>
+      <p><strong>IMDb Rating:</strong> {{imdb.rating}}/10 ({{imdb.votes}} votes)</p>
+      <p><strong>Metacritic Score:</strong> {{metacritic}}</p>
+      <p><strong>Languages:</strong> {{languages.join(', ')}}</p>
+      <p><strong>Release Date:</strong> {{released}}</p>
+      <p><strong>Directors:</strong> {{directors.join(', ')}}</p>
+      <p><strong>Writers:</strong> {{writers.join(', ')}}</p>
+      
+      <h3>Cast:</h3>
+      <ul>
+        {{#each cast}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+
+      <h3>Awards:</h3>
+      <p><strong>Wins:</strong> {{awards.wins}}, <strong>Nominations:</strong> {{awards.nominations}}</p>
+
+      <h3>Rotten Tomatoes:</h3>
+      <p><strong>Consensus:</strong> {{tomatoes.consensus}}</p>
+      <p><strong>Rotten Tomatoes Score:</strong> {{tomatoes.rotten}}% (Fresh: {{tomatoes.fresh}}, Rotten: {{tomatoes.rotten}})</p>
+
+      <h3>Tomatoes Production:</h3>
+      <p><strong>Production:</strong> {{tomatoes.production}}</p>
+
+      
+    </div>
+  </div>
+{{/each}}
+
+</body>
+</html>
+
+
+</body>
+</html>
